@@ -30,8 +30,9 @@
         </script>
 
         
-        // Then call the startAnimation function when you want the wheel to start spinning.
-        // This might be when the user clicks a "Spin" Button.
-        <button onClick="spinWheel.startAnimation();">Spin the Wheel</button>
+        <td align="center">
+                <button id="bigButton" class="bigButton" onclick="spinWheel.startAnimation(); this.disabled=true;" disabled="">Spin the Wheel</button>
+                &nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" onclick="spinWheel.stopAnimation(); spinWheel.rotationAngle=0; spinWheel.draw(); bigButton.disabled=false;">Reset</a>
+        </td>
     </body>
 </html>
