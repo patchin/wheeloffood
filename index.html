@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>My Winning Wheel</title>
+        <title>SFU Wheel of Food-tune</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
         <script src='Winwheel.js'></script>        
     </head>
@@ -11,7 +11,7 @@
         <script>
                 // Create wheel objects.
                 var spinWheel = new Winwheel({
-                'numSegments'    : 8,
+                'numSegments'    : 9,
                 'outerRadius'    : 170,
                 'segments'       :
                 [
@@ -22,7 +22,8 @@
                 {'fillStyle' : '#e7706f', 'text' : 'Ichibankan'},
                 {'fillStyle' : '#e7706f', 'text' : 'Mackenzie'},
                 {'fillStyle' : '#e7706f', 'text' : 'Pasta Polo'},
-                {'fillStyle' : '#e7706f', 'text' : 'Other Burrito Place'}                    
+                {'fillStyle' : '#e7706f', 'text' : 'Guadalupe'},
+                {'fillStyle' : '#e7706f', 'text' : 'Bubble Waffle'}
                 ],
                 'animation' :                   // Note animation properties passed in constructor parameters.
                 {
@@ -36,7 +37,7 @@
         
         <td align="center">
                 <button id="bigButton" class="bigButton" onclick="spinWheel.startAnimation(); this.disabled=true;" disabled="">Spin the Wheel</button>
-                &nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" onclick="spinWheel.stopAnimation(); spinWheel.rotationAngle=0; spinWheel.draw(); bigButton.disabled=false;">Reset</a>
+                <a href="javascript:void(0);" onclick="spinWheel.stopAnimation(); spinWheel.rotationAngle=0; spinWheel.draw(); bigButton.disabled=false;">Reset</a>
         </td>
     </body>
 </html>
