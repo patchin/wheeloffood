@@ -14,7 +14,8 @@
                 height: 400px;
             }
         </style>
-        
+        <button id="bigButton" class="bigButton" onclick="spinWheel.startAnimation(); this.disabled=true;" disabled="">Spin the Wheel</button>
+        <a href="javascript:void(0);" onclick="spinWheel.stopAnimation(); spinWheel.rotationAngle=0; spinWheel.draw(); bigButton.disabled=false;">Reset</a>        
         <div id="canvasContainer">
             <canvas id='canvas' width='500' height='500'>
                 Canvas not supported, use another browser.
@@ -50,13 +51,7 @@
                 });
         </script>
 
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <button id="bigButton" class="bigButton" onclick="spinWheel.startAnimation(); this.disabled=true;" disabled="">Spin the Wheel</button>
-        <a href="javascript:void(0);" onclick="spinWheel.stopAnimation(); spinWheel.rotationAngle=0; spinWheel.draw(); bigButton.disabled=false;">Reset</a>
+        
 
     </body>
 </html>
