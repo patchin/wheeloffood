@@ -14,7 +14,7 @@
                 height: 400px;
             }
         </style>
-        <button id="bigButton" class="bigButton" onclick="spinWheel.startAnimation(); this.disabled=true; var snd = new Audio('024580641-rattle-toy-wheel-fortune.wav');snd.play();">Spin the Wheel</button>
+        <button id="bigButton" class="bigButton" onclick="spinWheel.startAnimation(); this.disabled=true; snd.play();">Spin the Wheel</button>
         <a href="javascript:void(0);" onclick="spinWheel.stopAnimation(); spinWheel.rotationAngle=0; spinWheel.draw(); bigButton.disabled=false;">Reset</a>        
         <div id="canvasContainer">
             <canvas id='canvas' width='500' height='500'>
@@ -51,6 +51,7 @@
                     'spins'    : 8              // The number of complete 360 degree rotations the wheel is to do.
                 }
                 });
+                var snd = new Audio('024580641-rattle-toy-wheel-fortune.wav');
         </script>
 
         
