@@ -27,7 +27,7 @@
             }
         </style>
         <button id="bigButton" class="bigButton" onclick="spinWheel.startAnimation(); this.disabled=true; snd.play();">Spin the Wheel</button>
-        <a href="javascript:void(0);" onclick="snd.pause(); spinWheel.stopAnimation(); spinWheel.rotationAngle=0; spinWheel.draw(); bigButton.disabled=false;">Reset</a>        
+        <a href="javascript:void(0);" onclick="snd.pause(); snd.currentTime = 0; spinWheel.stopAnimation(); spinWheel.rotationAngle=0; spinWheel.draw(); bigButton.disabled=false;">Reset</a>        
         <div id="canvasContainer">
             <canvas id='canvas' width='500' height='500'>
                 Canvas not supported, use another browser.
