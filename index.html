@@ -32,7 +32,7 @@
                 -webkit-animation-play-state: paused;
             }
         </style>
-        <button id="bigButton" class="bigButton" onclick="spinWheel.startAnimation(); this.disabled=true; snd.play();">Spin the Wheel</button>
+        <button id="bigButton" class="bigButton" onclick="spin();">Spin the Wheel</button>
         <a href="javascript:void(0);" onclick="reset();">Reset</a>        
         <div id="canvasContainer">
             <canvas id='canvas' width='500' height='500'>
@@ -50,12 +50,18 @@
                     spinWheel.draw(); 
                     bigButton.disabled=false;
                     var monkey = document.getElementById('monkey');
-                    monkey.style.animationPlayState = "initial";
+                    monkey.style.animationName = "none";
                 }
             
+                function spin() {
+                    spinWheel.startAnimation(); 
+                    this.disabled=true; 
+                    snd.play();
+                }
             
                 function nextAnimationStep() {
                     var monkey = document.getElementById('monkey');
+                    monkey.style.animationName = "";
                     monkey.style.animationPlayState = "running";
                 }
             
