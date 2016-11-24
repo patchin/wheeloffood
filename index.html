@@ -13,6 +13,18 @@
                 width: 400px;                   /* Width and height should at least be the same as the canvas */
                 height: 400px;
             }
+            
+            @keyframes monkey {
+                from { }
+                to { }
+            }
+            
+            #monkey {
+                width: 100px;
+                height: 100px;
+                animation-name: monkey;
+                animation-duration: 4s;
+            }
         </style>
         <button id="bigButton" class="bigButton" onclick="spinWheel.startAnimation(); this.disabled=true; snd.play();">Spin the Wheel</button>
         <a href="javascript:void(0);" onclick="spinWheel.stopAnimation(); spinWheel.rotationAngle=0; spinWheel.draw(); bigButton.disabled=false;">Reset</a>        
@@ -20,6 +32,9 @@
             <canvas id='canvas' width='500' height='500'>
                 Canvas not supported, use another browser.
             </canvas>
+        </div>
+        <div id="monkey">
+            <img src="monkey.jpg"/>
         </div>
         <script>
                 // Create wheel objects.
