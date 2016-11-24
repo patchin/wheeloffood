@@ -63,7 +63,9 @@
                 function nextAnimationStep() {
                     var monkey = document.getElementById('monkey');
                     monkey.style.animationName = ""; /* reset to initial state, paused */
-                    if (Math.random() < 0.333) {
+                    var x = Math.random();
+                    console.log("x=" + x);
+                    if (x < 0.333) {
                         monkey.style.animationPlayState = "running";
                     }
                 }
