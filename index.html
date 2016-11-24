@@ -40,6 +40,10 @@
         <img id="monkey" src="monkey.jpg"/>
 
         <script>
+                function nextAnimationStep() {
+                    $('#monkey').style.animationPlayState = "running";
+                }
+            
                 // Create wheel objects.
                 var spinWheel = new Winwheel({
                 'numSegments'    : 11,
@@ -66,7 +70,8 @@
                 {
                     'type'     : 'spinToStop',  // Type of animation. 
                     'duration' : 5,             // How long the animation is to take in seconds.
-                    'spins'    : 8              // The number of complete 360 degree rotations the wheel is to do.
+                    'spins'    : 8,              // The number of complete 360 degree rotations the wheel is to do.
+                    'callbackFinished' : 'nextAnimationStep()'
                 }
                 });
                 var snd = new Audio('wheel-fortune-2.wav');
