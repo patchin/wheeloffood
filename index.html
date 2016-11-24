@@ -15,13 +15,16 @@
             }
             
             @keyframes monkey {
-                from { }
-                to { }
+                from { left: 0; top: 0;}
+                to { left: 500; top: 500;}
             }
             
             #monkey {
+                position: fixed;
                 width: 100px;
                 height: 100px;
+                left: 0;
+                top: 0;
                 animation-name: monkey;
                 animation-duration: 4s;
             }
@@ -33,9 +36,8 @@
                 Canvas not supported, use another browser.
             </canvas>
         </div>
-        <div id="monkey">
-            <img src="monkey.jpg"/>
-        </div>
+        <img id="monkey" src="monkey.jpg"/>
+
         <script>
                 // Create wheel objects.
                 var spinWheel = new Winwheel({
