@@ -42,7 +42,10 @@
         <img id="monkey" src="monkey.jpg"/>
 
         <script>
+                var resetCalled;
+            
                 function reset() {
+                    resetCalled = true;
                     snd.pause(); 
                     snd.currentTime = 0; 
                     spinWheel.stopAnimation(); 
@@ -54,13 +57,18 @@
                 }
             
                 function spin() {
+                    resetCalled = false;
                     var bigButton = document.getElementById('bigButton');
                     spinWheel.startAnimation(); 
                     bigButton.disabled=true; 
                     snd.play();
                 }
             
+                /* gets called whenever stopAnimation() is called or animation ends */
                 function nextAnimationStep() {
+                    if (resetCalled) {
+                        return;
+                    }
                     var monkey = document.getElementById('monkey');
                     monkey.style.animationName = ""; /* reset to initial state, paused */
                     var x = Math.random();
