@@ -62,8 +62,10 @@
             
                 function nextAnimationStep() {
                     var monkey = document.getElementById('monkey');
-                    monkey.style.animationName = "";
-                    monkey.style.animationPlayState = "running";
+                    monkey.style.animationName = ""; /* reset to initial state, paused */
+                    if (Math.random() < 0.333) {
+                        monkey.style.animationPlayState = "running";
+                    }
                 }
             
                 // Create wheel objects.
