@@ -42,7 +42,8 @@
 
         <script>
                 function nextAnimationStep() {
-                    $('#monkey').style.animationPlayState = "running";
+                    var monkey = getElementById('monkey');
+                    monkey.style.animationPlayState = "running";
                 }
             
                 // Create wheel objects.
