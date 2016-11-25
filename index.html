@@ -75,6 +75,7 @@
                     console.log("x=" + x);
                     if (x < 0.333) {
                         monkey.style.animationPlayState = "running";
+                        gm_monkey.play();
                     }
                     else {
                         monkey.style.animationPlayState = "paused";
@@ -112,7 +113,8 @@
                     'callbackFinished' : 'nextAnimationStep()'
                 }
                 });
-                var snd = new Audio('wheel-fortune-2.wav');
+                var snd = new Audio('wheel-fortune-3.wav');
+                var gm_monkey = new Audio('gm-monkey.wav');
         </script>
 
         
