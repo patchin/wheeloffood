@@ -54,6 +54,8 @@
                     bigButton.disabled=false;
                     var monkey = document.getElementById('monkey');
                     monkey.style.animationName = "none";
+                    gm_monkey.pause();
+                    gm_monkey.currentTime = 0;
                 }
             
                 function spin() {
